@@ -9,7 +9,7 @@ class HeroSection extends HTMLElement {
         <div class="hero__column hero__column--left">
           <video 
             class="hero__video" 
-            poster="../../assets/video/coin-poster.webp"
+            poster="../../assets/video/coin-poster.webp" 
             autoplay 
             muted 
             loop 

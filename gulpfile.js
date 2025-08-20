@@ -11,6 +11,7 @@ const browserSync = require("browser-sync").create();
 const del = require("del");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
+const replace = require("gulp-replace");
 
 // File paths
 const paths = {
@@ -37,6 +38,9 @@ const paths = {
     data: "src/data/**/*.js",
   },
 };
+
+// Production base URL
+const PRODUCTION_BASE = "https://lukasemperfi.github.io/space-lab";
 
 // Error handling
 const errorHandler = {
@@ -69,6 +73,14 @@ function styles() {
         grid: true,
       })
     )
+    .pipe(
+      // Replace relative asset paths with production URLs in CSS
+      replace(/\.\.\/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace single-level relative asset paths with production URLs in CSS
+      replace(/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(paths.dist.css))
     .pipe(browserSync.stream())
@@ -97,6 +109,14 @@ function stylesMin() {
         grid: true,
       })
     )
+    .pipe(
+      // Replace relative asset paths with production URLs in CSS
+      replace(/\.\.\/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace single-level relative asset paths with production URLs in CSS
+      replace(/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
     .pipe(cleanCSS())
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest(paths.dist.css))
@@ -114,6 +134,22 @@ function scripts() {
     .src([paths.src.js, paths.src.components, paths.src.data], { base: "src" })
     .pipe(plumber(errorHandler))
     .pipe(sourcemaps.init())
+    .pipe(
+      // Replace relative asset paths with production URLs in JavaScript
+      replace(/\.\.\/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace single-level relative asset paths with production URLs in JavaScript
+      replace(/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace relative import paths with production URLs in JavaScript
+      replace(/\.\.\/\.\.\/data\//g, `${PRODUCTION_BASE}/data/`)
+    )
+    .pipe(
+      // Replace single-level relative data paths with production URLs in JavaScript
+      replace(/\.\.\/data\//g, `${PRODUCTION_BASE}/data/`)
+    )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(browserSync.stream())
@@ -131,6 +167,22 @@ function scriptsMin() {
     .src([paths.src.js, paths.src.components, paths.src.data], { base: "src" })
     .pipe(plumber(errorHandler))
     .pipe(sourcemaps.init())
+    .pipe(
+      // Replace relative asset paths with production URLs in JavaScript
+      replace(/\.\.\/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace single-level relative asset paths with production URLs in JavaScript
+      replace(/\.\.\/assets\//g, `${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace relative import paths with production URLs in JavaScript
+      replace(/\.\.\/\.\.\/data\//g, `${PRODUCTION_BASE}/data/`)
+    )
+    .pipe(
+      // Replace single-level relative data paths with production URLs in JavaScript
+      replace(/\.\.\/data\//g, `${PRODUCTION_BASE}/data/`)
+    )
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("."))
@@ -161,6 +213,32 @@ function html() {
           path.dirname = "";
         }
       })
+    )
+    .pipe(
+      // Replace relative asset paths with production URLs
+      replace(/href="\.\.\/\.\.\/assets\//g, `href="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/src="\.\.\/\.\.\/assets\//g, `src="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/poster="\.\.\/\.\.\/assets\//g, `poster="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/url\(\.\.\/\.\.\/assets\//g, `url(${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace single-level relative asset paths with production URLs
+      replace(/href="\.\.\/assets\//g, `href="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/src="\.\.\/assets\//g, `src="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/poster="\.\.\/assets\//g, `poster="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/url\(\.\.\/assets\//g, `url(${PRODUCTION_BASE}/assets/`)
     )
     .pipe(gulp.dest(paths.dist.root))
     .pipe(browserSync.stream())
@@ -194,10 +272,35 @@ function htmlMin() {
     .pipe(
       htmlmin({
         collapseWhitespace: true,
-        removeComments: true,
         minifyCSS: true,
         minifyJS: true,
       })
+    )
+    .pipe(
+      // Replace relative asset paths with production URLs
+      replace(/href="\.\.\/\.\.\/assets\//g, `href="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/src="\.\.\/\.\.\/assets\//g, `src="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/poster="\.\.\/\.\.\/assets\//g, `poster="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/url\(\.\.\/\.\.\/assets\//g, `url(${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      // Replace single-level relative asset paths with production URLs
+      replace(/href="\.\.\/assets\//g, `href="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/src="\.\.\/assets\//g, `src="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/poster="\.\.\/assets\//g, `poster="${PRODUCTION_BASE}/assets/`)
+    )
+    .pipe(
+      replace(/url\(\.\.\/assets\//g, `url(${PRODUCTION_BASE}/assets/`)
     )
     .pipe(gulp.dest(paths.dist.root))
     .pipe(
