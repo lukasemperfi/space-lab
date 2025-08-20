@@ -1,4 +1,4 @@
-import { teamData } from '../../data/home-page/team.js';
+import { teamData } from '../../data/home-page/team.min.js';
 
 class TeamSection extends HTMLElement {
   constructor() {
