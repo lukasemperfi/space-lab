@@ -1,5 +1,6 @@
 {
   "name": "spacelab-gulp-project",
+  "homepage": "https://spacelab.github.io/finity-touch",
   "version": "1.0.0",
   "description": "Modern web development project with Gulp, SCSS, JavaScript, and Web Components",
   "main": "index.js",
@@ -12,7 +13,9 @@
     "format:check": "prettier --check \"src/**/*.{html,scss,js}\"",
     "format:html": "prettier --write \"src/**/*.html\"",
     "format:scss": "prettier --write \"src/**/*.scss\"",
-    "format:js": "prettier --write \"src/**/*.js\""
+    "format:js": "prettier --write \"src/**/*.js\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "gulp",
