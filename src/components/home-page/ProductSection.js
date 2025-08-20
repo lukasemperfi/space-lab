@@ -1,4 +1,4 @@
-import { productsData } from '../../data/home-page/products.js';
+import { productsData } from '../../data/home-page/products.min.js';
 
 class ProductSection extends HTMLElement {
   constructor() {

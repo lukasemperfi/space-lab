@@ -1,7 +1,7 @@
-import '../components/shared/app-header/AppHeader.js';
-import '../components/shared/nav-menu/NavMenu.js';
-import '../components/shared/icons/BurgerIcon.js';
-import '../components/shared/app-button/AppButton.js';
-import '../components/shared/nav-buttons/NavButtons.js';
+import '../components/shared/app-header/AppHeader.min.js';
+import '../components/shared/nav-menu/NavMenu.min.js';
+import '../components/shared/icons/BurgerIcon.min.js';
+import '../components/shared/app-button/AppButton.min.js';
+import '../components/shared/nav-buttons/NavButtons.min.js';
 
-import '../components/shared/ComingSoon.js';
+import '../components/shared/ComingSoon.min.js';

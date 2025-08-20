@@ -1,4 +1,4 @@
-import { thesisData } from '../../data/fund-page/fund-thesis.js';
+import { thesisData } from '../../data/fund-page/fund-thesis.min.js';
 
 class FundThesisSection extends HTMLElement {
   constructor() {

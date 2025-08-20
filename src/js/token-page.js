@@ -1,27 +1,27 @@
-import '../components/shared/app-header/AppHeader.js';
-import '../components/shared/nav-menu/NavMenu.js';
-import '../components/shared/icons/BurgerIcon.js';
-import '../components/shared/nav-buttons/NavButtons.js';
+import '../components/shared/app-header/AppHeader.min.js';
+import '../components/shared/nav-menu/NavMenu.min.js';
+import '../components/shared/icons/BurgerIcon.min.js';
+import '../components/shared/nav-buttons/NavButtons.min.js';
 
-import '../components/token-page/HeroSection.js';
+import '../components/token-page/HeroSection.min.js';
 
-import '../components/token-page/TokenThesisSection.js';
-import '../components/home-page/ThesisCard.js';
-import '../components/home-page/ThesisSlider.js';
-import '../components/shared/icons/thesis/FNTIcon.js';
-import '../components/shared/icons/thesis/NFTIcon.js';
-import '../components/shared/icons/thesis/BSCIcon.js';
+import '../components/token-page/TokenThesisSection.min.js';
+import '../components/home-page/ThesisCard.min.js';
+import '../components/home-page/ThesisSlider.min.js';
+import '../components/shared/icons/thesis/FNTIcon.min.js';
+import '../components/shared/icons/thesis/NFTIcon.min.js';
+import '../components/shared/icons/thesis/BSCIcon.min.js';
 
-import '../components/token-page/TokenomicSection.js';
+import '../components/token-page/TokenomicSection.min.js';
 
-import '../components/token-page/TokenRoadmapSection.js';
-import '../components/shared/icons/RoadmapLineVerticalIcon.js';
-import '../components/shared/icons/RoadmapLineVerticalWideIcon.js';
+import '../components/token-page/TokenRoadmapSection.min.js';
+import '../components/shared/icons/RoadmapLineVerticalIcon.min.js';
+import '../components/shared/icons/RoadmapLineVerticalWideIcon.min.js';
 
-import '../components/token-page/TokenContactUs.js';
-import '../components/shared/ContactForm.js';
-import '../components/shared/Toast.js';
+import '../components/token-page/TokenContactUs.min.js';
+import '../components/shared/ContactForm.min.js';
+import '../components/shared/Toast.min.js';
 
-import '../components/token-page/TokenAdressSection.js';
+import '../components/token-page/TokenAdressSection.min.js';
 
-import '../components/shared/Footer.js';
+import '../components/shared/Footer.min.js';

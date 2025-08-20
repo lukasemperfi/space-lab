@@ -1,4 +1,4 @@
-import { thesisData } from '../../data/home-page/thesis.js';
+import { thesisData } from '../../data/home-page/thesis.min.js';
 
 class HomeThesisSection extends HTMLElement {
   constructor() {

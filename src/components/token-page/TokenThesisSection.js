@@ -1,4 +1,4 @@
-import { thesisData } from '../../data/token-page/token-thesis.js';
+import { thesisData } from '../../data/token-page/token-thesis.min.js';
 
 class TokenThesisSection extends HTMLElement {
   constructor() {

@@ -1,4 +1,4 @@
-import { fundFAQData } from '../../data/fund-page/fund-faq.js';
+import { fundFAQData } from '../../data/fund-page/fund-faq.min.js';
 
 class FundFAQSection extends HTMLElement {
   constructor() {

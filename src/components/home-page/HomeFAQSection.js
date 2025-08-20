@@ -1,4 +1,4 @@
-import { homeFAQData } from '../../data/home-page/faq.js';
+import { homeFAQData } from '../../data/home-page/faq.min.js';
 
 class FAQSection extends HTMLElement {
   constructor() {
