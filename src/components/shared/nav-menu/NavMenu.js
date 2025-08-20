@@ -24,16 +24,16 @@ class NavMenu extends HTMLElement {
       <nav class="nav-menu">
         <ul class="nav-menu__list ${listClass}">
           <li class="nav-menu__item">
-            <a href="/" class="nav-menu__link ${linkClass} ${currentPage === 'home' ? 'nav-menu__link--active' : ''}" ${currentPage === 'home' ? 'onclick="return false;"' : ''}>Home</a>
+            <a href="/space-lab/" class="nav-menu__link ${linkClass} ${currentPage === 'home' ? 'nav-menu__link--active' : ''}" ${currentPage === 'home' ? 'onclick="return false;"' : ''}>Home</a>
           </li>
           <li class="nav-menu__item">
-            <a href="/marketplace" class="nav-menu__link ${linkClass} ${currentPage === 'marketplace' ? 'nav-menu__link--active' : ''}" ${currentPage === 'marketplace' ? 'onclick="return false;"' : ''}>Marketplace</a>
+            <a href="/space-lab/marketplace-page.html" class="nav-menu__link ${linkClass} ${currentPage === 'marketplace' ? 'nav-menu__link--active' : ''}" ${currentPage === 'marketplace' ? 'onclick="return false;"' : ''}>Marketplace</a>
           </li>
           <li class="nav-menu__item">
-            <a href="/token" class="nav-menu__link ${linkClass} ${currentPage === 'token' ? 'nav-menu__link--active' : ''}" ${currentPage === 'token' ? 'onclick="return false;"' : ''}>Token</a>
+            <a href="/space-lab/token-page.html" class="nav-menu__link ${linkClass} ${currentPage === 'token' ? 'nav-menu__link--active' : ''}" ${currentPage === 'token' ? 'onclick="return false;"' : ''}>Token</a>
           </li>
           <li class="nav-menu__item">
-            <a href="/fund" class="nav-menu__link ${linkClass} ${currentPage === 'fund' ? 'nav-menu__link--active' : ''}" ${currentPage === 'fund' ? 'onclick="return false;"' : ''}>Fund</a>
+            <a href="/space-lab/fund-page.html" class="nav-menu__link ${linkClass} ${currentPage === 'fund' ? 'nav-menu__link--active' : ''}" ${currentPage === 'fund' ? 'onclick="return false;"' : ''}>Fund</a>
           </li>
           <li class="nav-menu__separator"></li>
           <li class="nav-menu__item nav-menu__item--language">

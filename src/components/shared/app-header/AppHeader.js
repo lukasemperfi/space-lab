@@ -11,7 +11,7 @@ class AppHeader extends HTMLElement {
       <header class="header">
         <div class="header__container">
           <div class="header__logo">
-            <a href="/">
+            <a href="/space-lab/">
               <img loading="lazy"  src="../assets/icons/logo.svg" alt="Logo" aria-label="Logo">
             </a>
           </div>
