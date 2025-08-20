@@ -33,7 +33,7 @@ class TokenHeroSection extends HTMLElement {
                     <p class="hero-banner__description">
                     Finity Token - is an asset that fuels the Finity Touch ecosystem and ensures the development of existing projects and the possibility of discovering new fragments of the ecosystem
                 </p>
-                <button class="hero-banner__button wavy-button-2 color-blue">Buy Token</button>
+                <a href="#" class="hero-banner__button wavy-button-2 color-blue">Buy Token</a>
                 </div>
             </div>
      

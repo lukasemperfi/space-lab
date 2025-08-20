@@ -261,6 +261,7 @@
 
   &__button {
     margin: 0 auto;
+    display: inline-block;
 
     @media (min-width: $bp-md) {
       margin: inherit;
