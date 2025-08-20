@@ -1,0 +1,75 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+
+.coming-soon {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+
+  @media (min-width: $bp-2xl) {
+    height: calc(100vh - 114px);
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    font-weight: 600;
+    font-size: calcFluidValue(3.125rem, 9.375rem);
+    letter-spacing: 0.12em;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__decor-left,
+  &__decor-right {
+    position: absolute;
+    z-index: -1;
+    width: 238px;
+    filter: blur(82px);
+
+    @media (min-width: $bp-md) {
+      width: 300px;
+    }
+
+    @media (min-width: $bp-lg) {
+      width: 350px;
+    }
+
+    @media (min-width: $bp-xl) {
+      width: 400px;
+    }
+
+    @media (min-width: $bp-2xl) {
+      width: 450px;
+    }
+
+    @media (min-width: $bp-3xl) {
+      width: 512px;
+    }
+  }
+
+  &__decor-left {
+    top: -8%;
+    left: -18%;
+
+    @media (min-width: $bp-2xl) {
+      top: -43%;
+      left: -10.5%;
+    }
+  }
+
+  &__decor-right {
+    bottom: -9%;
+    right: -23.5%;
+
+    @media (min-width: $bp-2xl) {
+      bottom: -33.5%;
+      right: -10.5%;
+    }
+  }
+}

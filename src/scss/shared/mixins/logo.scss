@@ -1,0 +1,21 @@
+@use "../../variables" as *;
+
+@mixin logo-size-sm {
+  width: 120px;
+  height: 27px;
+}
+
+@mixin logo-size-md {
+  width: 170px;
+  height: 38px;
+}
+
+@mixin logo-size-lg {
+  width: 254px;
+  height: 55px;
+}
+
+@mixin logo-size-xl {
+  width: 289px;
+  height: 63px;
+}

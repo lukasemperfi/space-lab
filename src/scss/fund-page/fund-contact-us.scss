@@ -1,0 +1,274 @@
+@use "../shared/mixins/corner" as *;
+@use "../../scss/variables" as *;
+
+$breakpoint-sm: 400px;
+$breakpoint-md: 840px;
+
+.fund-contact-us {
+  &.contact-us {
+    padding-left: 6px;
+    padding-right: 7px;
+  }
+
+  .contact-us__content {
+    max-width: 500px;
+
+    @media (min-width: $breakpoint-md) {
+      max-width: 900px;
+    }
+  }
+
+  .contact-us__title {
+    @media (min-width: $breakpoint-md) {
+      font-size: 40px;
+      margin-bottom: 102px;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 50px;
+      margin-bottom: 102px;
+    }
+  }
+
+  &.contact-us {
+  }
+
+  .page-container {
+    padding-top: 6px;
+    padding-bottom: 13px;
+
+    @media (min-width: $bp-3xl) {
+      padding-top: 121px;
+      padding-bottom: 87px;
+    }
+  }
+
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: $breakpoint-sm) {
+      gap: 15px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      gap: 40px;
+    }
+
+    &__content-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 17px 12px;
+      width: 100%;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 50px 0px;
+      }
+
+      &:before {
+        @include corner-bottom-left-sm;
+      }
+
+      &:after {
+        @include corner-top-right-sm;
+      }
+      &:before,
+      &:after {
+        width: 30px;
+        height: 30px;
+
+        @media (min-width: $breakpoint-md) {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+
+    &__title {
+      display: none;
+
+      @media (min-width: $breakpoint-md) {
+        display: flex;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 22px;
+    }
+
+    &__button {
+      font-weight: 600;
+      font-size: 18px;
+      padding: 9px 18px;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 25px;
+        padding: 13px 40px;
+      }
+
+      @media (min-width: $bp-lg) {
+        font-size: 33px;
+        padding: 13px 66px;
+      }
+    }
+
+    &__content-bottom {
+      width: 100%;
+    }
+
+    &__social {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      padding: 17px 14px;
+      column-gap: 20px;
+      row-gap: 27px;
+
+      @media (min-width: $breakpoint-md) {
+        flex-wrap: nowrap;
+        width: 848px;
+        gap: 0;
+      }
+    }
+
+    & svg,
+    & linkedin-icon,
+    & instagram-icon,
+    & telegram-icon,
+    & twitter-icon,
+    & reddit-icon,
+    & discord-icon {
+      width: 37px;
+      height: 37px;
+
+      @media (min-width: $breakpoint-md) {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    & linkedin-icon,
+    & instagram-icon,
+    & telegram-icon,
+    & twitter-icon,
+    & reddit-icon,
+    & discord-icon {
+      flex: 0 1 calc(33.333% - 20px);
+      display: inline-flex;
+      justify-content: center;
+    }
+  }
+
+  &__decor-left,
+  &__decor-right {
+    position: absolute;
+    display: none;
+    z-index: -1;
+    width: 300px;
+    aspect-ratio: 522 / 494;
+
+    @media (min-width: $bp-xl) {
+      display: block;
+    }
+
+    @media (min-width: $bp-3xl) {
+      width: 520px;
+    }
+
+    // @media (min-width: $bp-2xl) {
+    //   display: block;
+    //   width: 300px;
+    //   aspect-ratio: 429 / 460;
+    // }
+
+    // @media (min-width: $bp-3xl) {
+    //   width: 460px;
+    //   aspect-ratio: 460 / 494;
+    // }
+  }
+
+  &__decor-left-inner,
+  &__decor-right-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__decor-left {
+    top: 24.5%;
+    left: -2.5%;
+
+    @media (min-width: $bp-3xl) {
+      top: 24.5%;
+      left: -10.5%;
+    }
+  }
+
+  &__decor-right {
+    top: 18%;
+    right: -2.5%;
+
+    @media (min-width: $bp-3xl) {
+      top: 3%;
+      right: -15%;
+    }
+  }
+
+  &__diamond-left,
+  &__diamond-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(100px);
+  }
+
+  &__coin-left,
+  &__coin-right {
+    width: 100%;
+    //   aspect-ratio: 456 / 356;
+    // @media (min-width: $bp-2xl) {
+    width: 521px;
+    //   aspect-ratio: 245 / 220;
+    // }
+  }
+
+  &__coin-left {
+    position: absolute;
+    top: 12%;
+    left: -2%;
+    width: 100%;
+
+    @media (min-width: $bp-3xl) {
+      top: 9%;
+      left: -7%;
+    }
+
+    // @media (min-width: $bp-2xl) {
+    //   top: 12%;
+    //   left: 0%;
+    // }
+  }
+
+  &__coin-right {
+    position: absolute;
+    top: 12%;
+    right: -2%;
+    width: 100%;
+
+    @media (min-width: $bp-3xl) {
+      top: 8.5%;
+      right: 5%;
+    }
+  }
+}

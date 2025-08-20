@@ -1,0 +1,7 @@
+@use "../_variables" as *;
+
+.page-container {
+  max-width: $page-container-width;
+  padding: 0 17px;
+  margin: 0 auto;
+}

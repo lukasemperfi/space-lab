@@ -1,0 +1,48 @@
+{
+  "name": "spacelab-gulp-project",
+  "version": "1.0.0",
+  "description": "Modern web development project with Gulp, SCSS, JavaScript, and Web Components",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "clean": "gulp clean",
+    "format": "prettier --write \"src/**/*.{html,scss,js}\"",
+    "format:check": "prettier --check \"src/**/*.{html,scss,js}\"",
+    "format:html": "prettier --write \"src/**/*.html\"",
+    "format:scss": "prettier --write \"src/**/*.scss\"",
+    "format:js": "prettier --write \"src/**/*.js\""
+  },
+  "keywords": [
+    "gulp",
+    "scss",
+    "javascript",
+    "web-components",
+    "html"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-ttf2woff": "^2.0.0",
+    "gulp-ttf2woff2": "^5.0.0",
+    "gulp-uglify": "^3.0.2",
+    "prettier": "^3.6.2",
+    "sass": "^1.69.0"
+  },
+  "dependencies": {
+    "swiper": "^11.2.10"
+  }
+}

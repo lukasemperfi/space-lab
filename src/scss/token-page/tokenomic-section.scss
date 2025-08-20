@@ -1,0 +1,103 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+.tokenomic {
+  padding-top: 51px;
+  padding-bottom: 90px;
+  position: relative;
+  overflow-x: clip;
+
+  @media (min-width: $bp-2xl) {
+    padding-top: 104px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__blur-img {
+    position: absolute;
+    z-index: -1;
+
+    &.left-mobile,
+    &.right-mobile {
+      display: block;
+
+      @media (min-width: $bp-sm) {
+        display: none;
+      }
+    }
+
+    &.left-mobile {
+      top: 4.5%;
+      right: 84.5%;
+      filter: blur(60px);
+    }
+
+    &.right-mobile {
+      top: 82.5%;
+      left: 70.5%;
+      filter: blur(60px);
+    }
+
+    &.left-desktop,
+    &.right-desktop {
+      display: none;
+      filter: blur(200px);
+
+      @media (min-width: $bp-sm) {
+        display: block;
+      }
+
+      &.left-desktop {
+        top: 1.5%;
+        right: 81.5%;
+      }
+
+      &.right-desktop {
+        top: 92%;
+        left: 75%;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: calcFluidValue(1.875rem, 4.3125rem);
+    margin-bottom: 7px;
+
+    @media (min-width: $bp-2xl) {
+      margin-bottom: 12px;
+    }
+
+    &--highlight {
+      background: linear-gradient(164deg, #86affe 0%, #a57aff 50.78%, #fb84ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: calcFluidValue(0.75rem, 1.5625rem);
+    line-height: 1.55;
+    text-align: center;
+    width: calcFluidValue(18.75rem, 69.5625rem);
+
+    margin-bottom: 38px;
+
+    @media (min-width: $bp-2xl) {
+      margin-bottom: 65px;
+    }
+  }
+
+  svg {
+    max-width: 1087px;
+    height: auto;
+    width: 83.65%;
+  }
+}

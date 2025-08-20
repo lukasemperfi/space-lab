@@ -1,0 +1,24 @@
+@use "../../scss/variables" as *;
+
+.fund-thesis-section {
+  padding-top: 10px;
+
+  @media (min-width: $bp-2xl) {
+    padding-top: 0;
+    margin: -7px 0;
+  }
+
+  .page-container {
+    @media (min-width: $bp-2xl) {
+      top: -155px;
+    }
+  }
+
+  .thesis-section .thesis__card {
+    box-shadow: 2px 2px 9px 0 #169d00;
+
+    &::before {
+      background: linear-gradient(149deg, #b2ff0f 0%, #76ffef 100%);
+    }
+  }
+}

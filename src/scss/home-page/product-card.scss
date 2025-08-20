@@ -1,0 +1,212 @@
+@use "../../scss/variables" as *;
+@use "../../scss/shared/mixins/typography" as *;
+@use "../../scss/shared/mixins/corner" as *;
+@use "../../scss/shared/mixins/wavy-button" as *;
+
+.product-card {
+  position: relative;
+  max-width: 1920px;
+
+  &__container {
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 23px;
+    // margin: 0 auto;
+
+    @media (min-width: 934px) {
+      padding: 0;
+      // max-width: 1542px;
+      flex-direction: row;
+    }
+
+    @media (min-width: $bp-3xl) {
+      align-items: flex-start;
+    }
+  }
+
+  &__col1 {
+    width: 100%;
+  }
+
+  &__col2 {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: calcFluidValue(2.0625rem, 0rem, $bp-xs, $bp-3xl);
+    padding-right: calcFluidValue(2.0625rem, 0rem, $bp-xs, $bp-3xl);
+    position: relative;
+
+    @media (min-width: $bp-3xl) {
+      padding-top: 68px;
+    }
+  }
+
+  &__video {
+    display: block;
+
+    width: 100%;
+
+    object-fit: cover;
+
+    mix-blend-mode: screen;
+  }
+
+  &__content {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    width: 100%;
+    // padding: 0px calcFluidValue(2.0625rem, 3.3125rem, $bp-xs, $bp-2xl);
+    position: relative;
+  }
+
+  &__content-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px 14px 20px 14px;
+    gap: 7px;
+    position: relative;
+
+    @media (min-width: $bp-xl) {
+      justify-content: flex-start;
+      gap: 20px;
+      padding: 4px 33px;
+      padding-bottom: 76px;
+    }
+
+    // @media (min-width: $bp-3xl) {
+    //   padding: 0;
+    // }
+
+    &::before {
+      @include corner-top-right-sm;
+
+      @media (min-width: $bp-lg) {
+        @include corner-top-right-xl;
+      }
+    }
+
+    &::after {
+      @include corner-bottom-left-sm;
+
+      @media (min-width: $bp-lg) {
+        @include corner-bottom-left-xl;
+      }
+    }
+  }
+  &__title {
+    font-family: $font-family-secondary;
+    font-size: calcFluidValue(1.875rem, 5.3125rem, $bp-xs, $bp-3xl);
+
+    font-weight: 600;
+    line-height: 1.3;
+    // width: calcFluidValue(15.3125rem, 24.5rem, $bp-xs, $bp-2xl);
+    text-align: left;
+
+    @media (min-width: $bp-2xl) {
+      letter-spacing: -0.02em;
+      // text-align: left;
+    }
+  }
+
+  &__description {
+    font-size: calcFluidValue(0.8125rem, 1.5625rem, $bp-xs, $bp-3xl);
+    font-weight: 500;
+    line-height: 1.25;
+    text-align: center;
+
+    @media (min-width: $bp-2xl) {
+      text-align: left;
+      letter-spacing: 3%;
+    }
+  }
+  &__content-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+
+    @media (min-width: $bp-lg) {
+      flex-direction: row;
+      margin-top: 22px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: 5px;
+    }
+    // position: relative;
+  }
+
+  &__button {
+    @include button-size-small;
+    gap: 11px;
+
+    padding: 9.5px 19.5px;
+
+    @media (min-width: $bp-xl) {
+      @include button-size-large;
+      gap: 18px;
+    }
+
+    svg {
+      width: 12px;
+      height: 15px;
+
+      @media (min-width: $bp-xl) {
+        width: 21px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__decoration {
+    align-self: flex-end;
+    width: 93%;
+    height: 12px;
+    border-top: 2px dashed #fff;
+    border-bottom: 2px solid #fff;
+    margin-top: 26px;
+
+    @media (min-width: $bp-md) {
+      height: 23px;
+    }
+  }
+
+  &__decoration-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -19px;
+  }
+
+  &__product-number {
+    font-family: $font-family-secondary;
+    font-size: calcFluidValue(0.625rem, 1.1875rem, $bp-xs, $bp-2xl);
+    // position: absolute;
+    // bottom: -1px;
+    // right: -1px;
+    text-transform: uppercase;
+    letter-spacing: 0.015em;
+    line-height: normal;
+    writing-mode: vertical-rl;
+    // width: calcFluidValue(1.75rem, 2.125rem, $bp-xs, $bp-3xl);
+    // background-color: $color-bg-primary;
+
+    @media (min-width: $bp-md) {
+      font-weight: 400;
+      letter-spacing: normal;
+    }
+  }
+
+  & longarrow-icon {
+    display: inline-flex;
+  }
+}

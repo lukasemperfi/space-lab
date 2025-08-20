@@ -1,0 +1,24 @@
+@use "../variables" as *;
+
+.home-faq {
+  .faq__container {
+    @media (min-width: $bp-2xl) {
+      padding-top: 165px;
+      padding-bottom: 134px;
+    }
+  }
+
+  .faq__title {
+    background: linear-gradient(144deg, #ffb78f 0%, #db73ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .accordion__item {
+    &:before {
+      box-shadow: 2px 2px 20px 0px #ef39ff4d;
+      background: linear-gradient(103.59deg, #fc84ff 13.23%, #54d1fa 91.95%);
+    }
+  }
+}

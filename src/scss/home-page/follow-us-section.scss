@@ -1,0 +1,127 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+
+.follow-us {
+  padding: 11px 35px;
+  margin: 0 auto;
+  max-width: 1235px;
+
+  @media (min-width: $bp-md) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+
+  @media (min-width: $bp-3xl) {
+    padding: 0;
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    font-size: calcFluidValue(1.3125rem, 3.75rem);
+    text-align: center;
+    margin-bottom: calcFluidValue(2.5625rem, 6.3125rem);
+
+    // @media (min-width: $bp-3xl) {
+    //   margin-bottom: 101px;
+    // }
+  }
+
+  &__image-container {
+    position: relative;
+    max-width: 1235px;
+    aspect-ratio: 1235 / 786;
+  }
+
+  & img {
+    position: absolute;
+    // max-width: 100%;
+  }
+
+  &__base {
+    bottom: 0;
+  }
+
+  &__mask {
+    bottom: 0;
+    z-index: 3;
+    filter: drop-shadow(0px 20px 20px rgba(109, 220, 255, 0.25));
+    pointer-events: none;
+  }
+
+  &__token {
+    z-index: 2;
+    transition: all 0.5s ease;
+    // transform-style: preserve-3d;
+
+    &--instagram {
+      width: 16.033%;
+      height: 25.7%;
+      bottom: 6.4%;
+      left: 28.3%;
+
+      filter: drop-shadow(0px 0px 29.12px #9e37c2);
+
+      &:hover {
+        transform: scale(1.05) translateX(2.525%) translateY(2.463%);
+      }
+    }
+    &--telegram {
+      width: 16.357%;
+      height: 22.901%;
+      bottom: 37%;
+      left: 21.5%;
+      filter: drop-shadow(0px 0px 29.12px #75a3de);
+
+      &:hover {
+        transform: scale(1.1) translateX(5.051%) translateY(5.263%);
+      }
+    }
+    &--discord {
+      width: 16.357%;
+      height: 23.283%;
+      top: 12.7%;
+      left: 29.7%;
+      filter: drop-shadow(0px 0px 29.12px #705ee1);
+
+      &:hover {
+        transform: scale(1.1) translateX(5.051%) translateY(5.263%);
+      }
+    }
+
+    &--linkedIn {
+      width: 15.385%;
+      height: 24.428%;
+      top: 0.4%;
+      left: 54.5%;
+      filter: drop-shadow(0px 0px 29.12px #75a3de);
+
+      &:hover {
+        transform: scale(1.1) translateX(5.051%) translateY(5.263%);
+      }
+    }
+    &--twitter {
+      width: 15.547%;
+      height: 25.7%;
+      bottom: 31.2%;
+      right: 18%;
+      filter: drop-shadow(0px 0px 29.12px #75a3de);
+
+      &:hover {
+        transform: scale(1.05) translateX(2.525%) translateY(2.463%);
+      }
+    }
+
+    &--reddit {
+      width: 15.952%;
+      height: 26.082%;
+      bottom: 38.5%;
+      right: 38%;
+      filter: drop-shadow(0px 0px 29.12px #995136);
+
+      &:hover {
+        transform: scale(1.1) translateX(5.051%) translateY(5.263%);
+      }
+    }
+  }
+}

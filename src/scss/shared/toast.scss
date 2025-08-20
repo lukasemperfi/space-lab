@@ -1,0 +1,82 @@
+@use "../variables" as *;
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  max-width: 400px;
+  background: $color-bg-primary;
+  border: 2px solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &--visible {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &--success {
+    border-color: #4ade80;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  }
+
+  &--error {
+    border-color: #f87171;
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  &__message {
+    color: $color-text-primary;
+    font-family: $font-family-primary;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    color: $color-text-secondary;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $color-text-primary;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  @media (max-width: $bp-sm) {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    transform: translateY(-100%);
+
+    &--visible {
+      transform: translateY(0);
+    }
+  }
+}

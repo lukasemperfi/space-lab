@@ -1,0 +1,109 @@
+@use "../variables" as *;
+@use "mixins/gradient-border" as *;
+@use "mixins/typography" as *;
+
+.accordion {
+  width: 100%;
+  //   width: 600px;
+  //   margin: 0 auto;
+  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  &__item {
+    @include gradient-border(1px, 10px, #fff, $color-bg-primary);
+
+    &.active .accordion__content {
+      padding-bottom: 10px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgb(84 208 250 / 49%);
+        transition: background-color 0.3s ease;
+
+        .accordion__header {
+          font-weight: 600;
+        }
+
+        .accordion__content {
+          color: black;
+        }
+      }
+    }
+  }
+
+  &__header {
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: calcFluidValue(0.875rem, 1.75rem);
+    font-weight: 500;
+    color: $color-text-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    plus-icon,
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__content {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: calcFluidValue(0.75rem, 1.1875rem);
+    font-weight: 400;
+    color: $color-text-secondary;
+    // opacity: 1;
+    // visibility: hidden;
+    line-height: 1.2;
+
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.5s ease,
+      visibility 0.5s ease;
+    // padding: 0 16px;
+  }
+}
+
+//1920px
+@media (min-width: $bp-3xl) {
+  .accordion {
+    gap: 32px;
+    &__item {
+    }
+
+    &__header {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 21px;
+      padding-right: 25px;
+
+      plus-icon,
+      svg {
+        width: 21px;
+        height: 21px;
+      }
+    }
+
+    &__content {
+      line-height: 1.5;
+    }
+  }
+}
+
+pluss-icon {
+  display: block;
+}

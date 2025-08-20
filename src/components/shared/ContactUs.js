@@ -1,0 +1,21 @@
+class ContactUs extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
+      <section class="contact-us">
+        <div class="contact-us__container">
+          <h2 class="contact-us__title">Contact Us</h2> 
+          <div class="contact-us__content">
+            <contact-form></contact-form>
+          </div>
+        </div>
+        <toast-notification></toast-notification>
+      </section>
+    `;
+  }
+}
+
+customElements.define('contact-us', ContactUs);

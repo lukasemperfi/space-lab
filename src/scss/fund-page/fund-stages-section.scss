@@ -1,0 +1,83 @@
+@use "../../scss/variables" as *;
+
+.fund-stages {
+  overflow-x: clip;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 43px;
+
+    @media (min-width: $bp-2xl) {
+      padding-top: 0;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: -1;
+
+    &--left-mobile,
+    &--right-mobile {
+      display: block;
+      filter: blur(60px);
+
+      @media (min-width: $bp-2xl) {
+        display: none;
+      }
+    }
+
+    &--left-mobile {
+      top: 4%;
+      left: -10%;
+    }
+
+    &--right-mobile {
+      top: 47.5%;
+      right: -41%;
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: $bp-2xl) {
+        display: block;
+        top: -15%;
+        left: -13%;
+        filter: blur(125px);
+      }
+    }
+  }
+
+  &__stages {
+    &--mobile {
+      display: block;
+      width: 71.85%;
+
+      @media (min-width: $bp-sm) {
+        width: 60%;
+      }
+
+      @media (min-width: $bp-md) {
+        width: 50%;
+      }
+
+      @media (min-width: $bp-lg) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media (min-width: $bp-lg) {
+        display: block;
+        width: 100%;
+        max-width: 1426px;
+      }
+    }
+  }
+}

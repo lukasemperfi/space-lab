@@ -1,0 +1,28 @@
+@use "../../variables" as *;
+@use "gradient-border" as *;
+
+// Size mixins - reusable across other files
+@mixin button-size-small {
+  padding: 10px 19.5px;
+  font-size: 15px;
+  font-weight: 600;
+  @include gradient-border-size(2px, 35px 0 35px 0);
+}
+
+@mixin button-size-large {
+  padding: 16px 25px;
+  font-size: 27px;
+  font-weight: 600;
+  @include gradient-border-size(3px, 60px 0 60px 0);
+
+  &:before {
+    margin: -3px;
+  }
+}
+
+@mixin button-color-orange {
+  background-color: #000;
+  &::before {
+    background: linear-gradient(144.66deg, #ff6c56 6.96%, #ff9344 88.16%);
+  }
+}

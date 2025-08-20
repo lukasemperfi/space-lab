@@ -1,0 +1,23 @@
+class PlusIcon extends HTMLElement {
+  constructor() {
+    super();
+    this.render();
+  }
+
+  render() {
+    this.innerHTML = `
+<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 0V18M0 8.57143H18" stroke="url(#paint0_linear_2_917)" stroke-width="2"/>
+<defs>
+<linearGradient id="paint0_linear_2_917" x1="2.95714" y1="7.29752e-06" x2="19.5798" y2="4.01807" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FC84FF"/>
+<stop offset="1" stop-color="#54D1FA"/>
+</linearGradient>
+</defs>
+</svg>
+
+    `;
+  }
+}
+
+customElements.define('plus-icon', PlusIcon);

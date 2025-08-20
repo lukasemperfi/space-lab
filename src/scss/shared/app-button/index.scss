@@ -1,0 +1,52 @@
+@use "../../variables" as *;
+@use "mixins" as *;
+
+.app-button {
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  &:hover {
+    // transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(84, 214, 255, 0.3);
+  }
+
+  &:active {
+    // transform: translateY(0);
+  }
+
+  &--primary {
+    background: linear-gradient(124deg, #54d6ff 0%, #c275ff 60%, #f36aff 100%);
+  }
+
+  &--primary-sm {
+    @include button-size-sm-primary;
+  }
+
+  &--primary-lg {
+    @include button-size-lg-primary;
+  }
+
+  &--secondary {
+    background: transparent;
+    border: 2px solid #fff;
+
+    &:hover {
+      // background: rgba(255, 255, 255, 0.1);
+      // box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+      filter: drop-shadow(0px 0px 5px #54d6ff);
+    }
+  }
+
+  &--secondary-sm {
+    @include button-size-sm-secondary;
+  }
+
+  &--secondary-lg {
+    @include button-size-lg-secondary;
+  }
+}

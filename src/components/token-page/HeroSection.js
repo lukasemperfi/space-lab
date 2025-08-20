@@ -1,0 +1,45 @@
+class TokenHeroSection extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
+    <section class="hero-full-section">
+
+   <img loading="lazy"  class="hero-full-section__decor hero-full-section__decor--token" src="../assets/images/token-hero/vector.png" alt="hero-section-bg" class="hero-full-section__decor">
+   
+      <div class="hero-full-section__video-container">
+        <video 
+            class="hero-full-section__video"   
+            muted 
+            loop 
+            playsinline
+            autoplay
+            aria-label="Finity Touch promotional video"
+
+          >
+            <source src="../assets/video/coin_token.mp4" type="video/mp4">
+            <source src="../assets/video/coin.mp4" type="video/mp4"  media="(max-width: 768px)">
+            Your browser does not support the video tag.
+          </video>
+      </div>
+          <div class="hero-full-section__content">
+            <div class="hero-banner hero-banner--size-sm">
+                <h1 class="hero-banner__title ">
+                    <span class="hero-banner__title-line1 hero-banner__title-line1--accent-1">Finity</span>
+                    <span class="hero-banner__title-line2 hero-banner__title-line2--accent-1">Token</span>
+                </h1>
+                    <p class="hero-banner__description">
+                    Finity Token - is an asset that fuels the Finity Touch ecosystem and ensures the development of existing projects and the possibility of discovering new fragments of the ecosystem
+                </p>
+                <button class="hero-banner__button wavy-button-2 color-blue">Buy Token</button>
+                </div>
+            </div>
+     
+    </section>
+    `;
+  }
+}
+
+customElements.define('tokenhero-section', TokenHeroSection);

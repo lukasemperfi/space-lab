@@ -1,0 +1,143 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+@use "../shared/mixins/wavy-button" as *;
+
+.token-contact-us {
+  overflow-x: clip;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-bottom: 66px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    @media (min-width: $bp-2xl) {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 118px;
+      padding-bottom: 200px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 612px;
+  }
+
+  &__title {
+    font-size: calcFluidValue(1.3125rem, 3.125rem);
+    font-weight: 700;
+    margin-bottom: 32px;
+
+    @media (min-width: $bp-2xl) {
+      margin-bottom: 47px;
+    }
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column;
+    // gap: 35px;
+    // padding-top: 36px;
+    width: 100%;
+    margin-bottom: 29px;
+
+    @media (min-width: $bp-md) {
+      // gap: 54px;
+      // margin-bottom: 60px;
+    }
+  }
+
+  &__decor-left,
+  &__decor-right {
+    position: absolute;
+    display: none;
+    z-index: -1;
+
+    @media (min-width: $bp-2xl) {
+      display: block;
+      width: 300px;
+      aspect-ratio: 429 / 460;
+    }
+
+    @media (min-width: $bp-3xl) {
+      width: 429px;
+      aspect-ratio: 429 / 460;
+    }
+  }
+
+  &__decor-left-inner,
+  &__decor-right-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__decor-left {
+    top: 45.5%;
+    left: 6.5%;
+  }
+
+  &__decor-right {
+    bottom: 46%;
+    right: 3%;
+  }
+
+  &__diamond-left,
+  &__diamond-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(100px);
+  }
+
+  &__coin-left,
+  &__coin-right {
+    @media (min-width: $bp-2xl) {
+      width: 145px;
+      aspect-ratio: 245 / 220;
+    }
+
+    @media (min-width: $bp-3xl) {
+      width: 245px;
+      aspect-ratio: 245 / 220;
+    }
+  }
+
+  &__coin-left {
+    position: absolute;
+
+    @media (min-width: $bp-2xl) {
+      top: 29%;
+      left: 25%;
+    }
+
+    @media (min-width: $bp-3xl) {
+      top: 18%;
+      left: 22%;
+    }
+  }
+
+  &__coin-right {
+    position: absolute;
+
+    @media (min-width: $bp-2xl) {
+      top: 29%;
+      left: 25%;
+    }
+
+    @media (min-width: $bp-3xl) {
+      top: 18%;
+      left: 22%;
+    }
+  }
+}

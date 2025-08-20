@@ -1,0 +1,106 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+@use "../shared/mixins/wavy-button" as *;
+
+.home-contact-us {
+  overflow-x: clip;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 84px 37px 58px 37px;
+    max-width: 1920px;
+    margin: 0 auto;
+
+    @media (min-width: $bp-2xl) {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 271px;
+      padding-bottom: 213px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 612px;
+  }
+
+  &__title {
+    font-size: calcFluidValue(1.3125rem, 3.125rem);
+    font-weight: 700;
+    margin-bottom: 34px;
+
+    @media (min-width: $bp-2xl) {
+      margin-bottom: 47px;
+    }
+  }
+
+  &__decor-left,
+  &__decor-right {
+    position: absolute;
+    display: none;
+    z-index: -1;
+
+    pointer-events: none;
+
+    @media (min-width: $bp-2xl) {
+      display: block;
+    }
+  }
+
+  &__decor-left-inner,
+  &__decor-right-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__decor-left {
+    top: 16%;
+    left: 5%;
+    width: 522px;
+    aspect-ratio: 522 / 494;
+  }
+
+  &__decor-right {
+    bottom: 10%;
+    right: 3%;
+    width: 429px;
+    aspect-ratio: 429 / 460;
+  }
+
+  &__diamond-left,
+  &__diamond-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(110px);
+  }
+
+  &__diamond-left {
+    width: 460px;
+  }
+
+  &__diamond-right {
+    width: 429px;
+  }
+
+  &__coin-left {
+    position: absolute;
+    top: 9%;
+    left: -7%;
+  }
+
+  &__coin-right {
+    position: absolute;
+
+    top: 27%;
+    left: 21%;
+  }
+}

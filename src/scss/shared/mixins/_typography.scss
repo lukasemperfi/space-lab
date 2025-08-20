@@ -1,0 +1,51 @@
+@use "../../variables" as *;
+
+@mixin fluid-font($min-size, $max-size, $min-vw: 375px, $max-vw: $page-container-width) {
+  font-size: $min-size;
+
+  @media screen and (min-width: $min-vw) {
+    font-size: calc(
+      #{$min-size} + #{strip-unit($max-size - $min-size)} *
+        ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+    );
+  }
+
+  @media screen and (min-width: $max-vw) {
+    font-size: $max-size;
+  }
+}
+
+// Helper function to remove units from values
+@function strip-unit($value) {
+  @if type-of($value) == "number" and not unitless($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  @return $value;
+}
+
+@function calcFluidValue($f-min, $f-max, $w-min: $bp-xs, $w-max: $bp-3xl) {
+  $f-min-unit: unit($f-min);
+  $f-max-unit: unit($f-max);
+  $w-min-unit: unit($w-min);
+  $w-max-unit: unit($w-max);
+
+  $f-min-num: strip-unit($f-min);
+  $f-max-num: strip-unit($f-max);
+  $w-min-num: strip-unit($w-min);
+  $w-max-num: strip-unit($w-max);
+
+  $k: ($f-max-num - $f-min-num) / ($w-max-num - $w-min-num);
+  $b: $f-min-num - $k * $w-min-num;
+
+  // Determine which value is actually min/max for clamp
+  $actual-min: if($f-min-num < $f-max-num, $f-min-num, $f-max-num);
+  $actual-max: if($f-min-num > $f-max-num, $f-min-num, $f-max-num);
+  $actual-min-unit: if($f-min-num < $f-max-num, $f-min-unit, $f-max-unit);
+  $actual-max-unit: if($f-min-num > $f-max-num, $f-min-unit, $f-max-unit);
+
+  @return clamp(
+    #{$actual-min}#{$actual-min-unit},
+    calc(#{$k * 100}vw + #{$b}#{$f-min-unit}),
+    #{$actual-max}#{$actual-max-unit}
+  );
+}

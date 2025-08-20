@@ -1,0 +1,203 @@
+@use "../../scss/variables" as *;
+@use "../../scss/shared/mixins/typography" as *;
+
+.team {
+  padding-top: 123px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: relative;
+  overflow-x: clip;
+  // background-color: $color-bg-primary;
+
+  &__container {
+    text-align: center;
+    position: relative;
+
+    @media (min-width: $bp-2xl) {
+      max-width: 1295px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    font-size: calcFluidValue(1.88rem, 3.75rem, $bp-xs, $bp-2xl);
+    font-weight: 700;
+    color: $color-text-primary;
+    // margin-bottom: calcFluidValue(1.0625rem, 2.625rem, $bp-xs, $bp-2xl);
+
+    @media (min-width: $bp-2xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-bottom: 54px;
+  }
+
+  .team-card {
+    @media (min-width: $bp-2xl) {
+      padding-bottom: 19px;
+    }
+
+    &__social {
+      @media (min-width: $bp-2xl) {
+        margin-top: 26px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button-container {
+    display: none;
+
+    @media (min-width: $bp-2xl) {
+      display: flex;
+      justify-content: center;
+      // margin-top: 40px;
+    }
+  }
+
+  &__button.wavy-button-2 {
+    @media (min-width: $bp-2xl) {
+      border-radius: 50px 0;
+      padding: 14px 22px;
+      font-size: 22px;
+      gap: 12px;
+      display: flex;
+    }
+  }
+
+  &__end-message {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: $font-family-secondary;
+    font-size: 18px;
+    color: $color-text-primary;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__collapse-button.wavy-button-2 {
+    @media (min-width: $bp-2xl) {
+      border-radius: 50px 0;
+      padding: 12px 20px;
+      font-size: 18px;
+      gap: 10px;
+      display: flex;
+    }
+  }
+
+  team-slider {
+    display: block;
+    @media (min-width: $bp-2xl) {
+      display: none;
+    }
+  }
+
+  // Team slider specific styles
+  & .team-slider {
+    width: 100%;
+
+    &.swiper {
+      // padding: 20px 36px;
+      // background-color: red;
+    }
+
+    & .swiper-wrapper {
+      // padding: 20px 36px;
+      // background-color: red;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__grid {
+    display: none;
+
+    @media (min-width: $bp-2xl) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 75px;
+    }
+  }
+
+  &__grid-list {
+    @media (min-width: $bp-2xl) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 47px 47px;
+      row-gap: 40px;
+      width: 100%;
+      // margin-bottom: 40px;
+    }
+  }
+
+  &__grid-item {
+    width: 100%;
+  }
+
+  &__decor-left-mobile,
+  &__decor-right-mobile {
+    position: absolute;
+    z-index: -1;
+    filter: blur(35px);
+    display: block;
+
+    @media (min-width: $bp-2xl) {
+      display: none;
+    }
+  }
+
+  &__decor-left-mobile {
+    top: -10%;
+    left: -12%;
+    width: 308px;
+    height: 168px;
+  }
+
+  &__decor-right-mobile {
+    bottom: 32%;
+    right: -13%;
+    width: 308px;
+    height: 127px;
+  }
+
+  &__decor-left-desktop,
+  &__decor-right-desktop {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    filter: blur(250px);
+
+    @media (min-width: $bp-2xl) {
+      display: block;
+    }
+  }
+
+  &__decor-left-desktop {
+    top: 1%;
+    left: -26%;
+
+    width: 585px;
+    height: 585px;
+  }
+
+  &__decor-right-desktop {
+    top: 25%;
+    right: -21.5%;
+
+    width: 585px;
+    height: 855px;
+  }
+}

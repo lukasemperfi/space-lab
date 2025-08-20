@@ -1,0 +1,39 @@
+@use "../../variables" as *;
+
+@mixin corner-base($size: 40px, $position: "top-right") {
+  content: "";
+  display: block;
+  width: $size;
+  height: $size;
+  background-color: transparent;
+  position: absolute;
+
+  @if $position == "top-right" {
+    top: 0;
+    right: 0;
+    border-right: 2px solid $color-text-primary;
+    border-top: 2px solid $color-text-primary;
+  } @else if $position == "bottom-left" {
+    bottom: 0;
+    left: 0;
+    border-left: 2px solid $color-text-primary;
+    border-bottom: 2px solid $color-text-primary;
+  }
+}
+
+// Top-right corner variants
+@mixin corner-top-right-sm {
+  @include corner-base(40px, "top-right");
+}
+@mixin corner-top-right-xl {
+  @include corner-base(71px, "top-right");
+}
+
+// Bottom-left corner variants
+
+@mixin corner-bottom-left-sm {
+  @include corner-base(40px, "bottom-left");
+}
+@mixin corner-bottom-left-xl {
+  @include corner-base(71px, "bottom-left");
+}

@@ -1,0 +1,91 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+
+.home-thesis {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-left: 52px;
+    padding-top: 18px;
+    padding-bottom: 6px;
+    max-width: 1580px;
+
+    @media (min-width: 420px) {
+      padding-left: 16px;
+      // padding-right: 16px;
+      align-items: center;
+    }
+
+    @media (min-width: $bp-2xl) {
+      padding-top: 63px;
+      padding-bottom: 63px;
+    }
+  }
+  &__title {
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    margin-left: 6px;
+    margin-bottom: 2px;
+    font-size: calcFluidValue(1.5rem, 3.75rem);
+
+    @media (min-width: $bp-2xl) {
+      margin-bottom: 11px;
+    }
+  }
+  &__title--highlight {
+    background: linear-gradient(144deg, #54d6ff 0%, #c275ff 54.69%, #f36aff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__content {
+    // background-color: red;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper {
+    padding: 10px 0;
+
+    @media (min-width: 450px) {
+      padding: 10px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .thesis__card {
+    max-width: 300px;
+
+    @media (min-width: $bp-2xl) {
+      max-width: 100%;
+    }
+
+    &-logo {
+      margin-bottom: 8px;
+      @media (min-width: $bp-2xl) {
+        margin-bottom: -9px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 14px;
+      line-height: 1;
+    }
+
+    &-description {
+    }
+  }
+
+  thesis-card {
+    display: block;
+    height: 100%;
+  }
+}

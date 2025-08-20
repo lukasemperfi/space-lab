@@ -1,0 +1,42 @@
+@use "../../scss/variables" as *;
+
+.fund-faq {
+  overflow-x: clip;
+  padding-bottom: 20px;
+  @media (min-width: $bp-sm) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $bp-3xl) {
+    padding-top: 151px;
+    padding-bottom: 151px;
+  }
+
+  .faq__title {
+    background: linear-gradient(149deg, #b2ff0f 0%, #76ffef 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .accordion__item {
+    &:before {
+      box-shadow: 2px 2px 20px 0px #55ff3980;
+      background: linear-gradient(148.71deg, #b2ff0f 10.47%, #76ffef 88.29%);
+    }
+  }
+
+  &__decor-right-desktop {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      position: absolute;
+      bottom: -27%;
+      right: -17.4%;
+      z-index: -1;
+      filter: blur(127px);
+    }
+  }
+}

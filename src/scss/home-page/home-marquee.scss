@@ -1,0 +1,139 @@
+@use "../variables" as *;
+
+.home-marquee {
+  // background-color: red;
+
+  bsc-logo,
+  coingecko-logo,
+  coinmarketcap-logo,
+  inch-logo,
+  metamask-logo,
+  pancakeswap-logo,
+  trustwallet-logo,
+  svg {
+    display: flex;
+    height: 38px;
+    width: max-content;
+
+    @media (min-width: $bp-2xl) {
+      height: 60px;
+    }
+  }
+
+  inch-logo svg {
+    filter: drop-shadow(0px 0px 9px #8ac7ff80);
+  }
+
+  coingecko-logo svg {
+    filter: drop-shadow(0px 0px 9px #d3ff8a);
+  }
+
+  coinmarketcap-logo svg {
+    filter: drop-shadow(0px 0px 9px #9ed1ff);
+  }
+
+  trustwallet-logo svg {
+    filter: drop-shadow(0px 0px 9px #8ac7ff);
+  }
+
+  metamask-logo svg {
+    filter: drop-shadow(0px 0px 9px #ffa572);
+  }
+
+  bsc-logo svg {
+    filter: drop-shadow(0px 0px 9px #fff38a);
+  }
+
+  pancakeswap-logo svg {
+    filter: drop-shadow(0px 0px 9px #ff9df5);
+  }
+
+  &__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  &__wrapper.fadeout-horizontal {
+    // mask-image: linear-gradient(
+    //   to right,
+    //   transparent,
+    //   black 5rem,
+    //   black calc(100% - 5rem),
+    //   transparent
+    // );
+  }
+
+  .home-marquee__text {
+    overflow: clip;
+  }
+
+  .home-marquee__text-track {
+    display: flex;
+    padding: 27px 0px;
+
+    width: max-content;
+    gap: 76px;
+
+    @media (min-width: $bp-2xl) {
+      padding: 20px 0px;
+      gap: 100px;
+    }
+    animation: marquee-move-text 25s linear infinite forwards;
+
+    @media (min-width: $bp-2xl) {
+      animation: marquee-move-text 15s linear infinite forwards;
+    }
+  }
+
+  @keyframes marquee-move-text {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// .marquee {
+//   /* This wrapper div is only there so we know for sure we have enough text to fill your screen.
+//      If you want to have this marquee loop on devices with a very large width, you simply need to add more text.*/
+//   &__wrapper {
+//     max-width: 1920px;
+//     margin: 0 auto;
+//     color: #fff;
+//   }
+
+//   &__wrapper.fadeout-horizontal {
+//     mask-image: linear-gradient(
+//       to right,
+//       transparent,
+//       black 5rem,
+//       black calc(100% - 5rem),
+//       transparent
+//     );
+//   }
+
+//   .marquee__text {
+//     overflow: clip;
+//   }
+
+//   .marquee__text-track {
+//     display: flex;
+//     padding-left: 4.8rem;
+//     gap: 4.8rem;
+//     width: max-content;
+//     animation: marquee-move-text var(--speed, 20s) linear infinite var(--direction, forwards);
+//   }
+
+//   .marquee__text p {
+//     border: 1px solid white;
+//     background-color: #141414;
+//     border-radius: 999px;
+//     padding: 1rem 2.5rem;
+//   }
+
+//   @keyframes marquee-move-text {
+//     to {
+//       transform: translateX(-50%);
+//     }
+//   }
+// }

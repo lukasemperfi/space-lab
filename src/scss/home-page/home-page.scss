@@ -1,0 +1,66 @@
+@use "../variables" as *;
+
+.home-page-main {
+  display: flex;
+  flex-direction: column;
+
+  hero-section,
+  home-marquee,
+  homethesis-section,
+  product-section,
+  team-section,
+  homefaq-section,
+  followus-section,
+  homecontact-us {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  hero-section {
+    order: 1;
+  }
+
+  home-marquee {
+    order: 2;
+
+    @media (min-width: $bp-md) {
+      order: 5;
+    }
+  }
+  homethesis-section {
+    order: 3;
+
+    @media (min-width: $bp-md) {
+      order: 2;
+    }
+  }
+
+  product-section {
+    order: 4;
+
+    @media (min-width: $bp-md) {
+      order: 3;
+    }
+  }
+
+  team-section {
+    order: 5;
+
+    @media (min-width: $bp-md) {
+      order: 4;
+    }
+  }
+
+  homefaq-section {
+    order: 6;
+  }
+
+  followus-section {
+    order: 7;
+  }
+
+  homecontact-us {
+    order: 8;
+  }
+}

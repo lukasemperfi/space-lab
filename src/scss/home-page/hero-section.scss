@@ -1,0 +1,185 @@
+@use "../_variables" as *;
+@use "../shared/app-button/_mixins" as *;
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding-top: 20px;
+  padding-bottom: 19px;
+
+  @media (min-width: $bp-md) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $bp-2xl) {
+    padding-top: 92px;
+  }
+
+  &.page-container {
+    @media (min-width: $bp-2xl) {
+      max-width: 1554px;
+    }
+  }
+
+  &__column--left {
+    display: flex;
+    justify-content: center;
+    @media (min-width: $bp-md) {
+      flex: 0 0 42%;
+      order: 2;
+    }
+  }
+
+  &__column--right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    @media (min-width: $bp-md) {
+      flex: 0 0 56.5%;
+      order: 1;
+      align-items: flex-start;
+    }
+
+    @media (min-width: $bp-2xl) {
+      gap: 40px;
+    }
+  }
+
+  .hero__video {
+    width: 100%;
+    max-width: 256px;
+    height: auto;
+    mix-blend-mode: screen;
+
+    @media (min-width: $bp-md) {
+      max-width: 350px;
+    }
+
+    @media (min-width: $bp-lg) {
+      max-width: 450px;
+    }
+
+    @media (min-width: $bp-2xl) {
+      min-width: 645px;
+      max-width: 645px;
+      height: 645px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    @media (min-width: $bp-md) {
+      align-items: flex-start;
+    }
+
+    @media (min-width: $bp-2xl) {
+      gap: 26px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    font-weight: 600;
+    font-size: 3.5rem;
+    background: linear-gradient(120deg, #54d6ff 0%, #c275ff 54.69%, #f36aff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 67px;
+
+    @media (min-width: $bp-md) {
+      font-weight: 600;
+      font-size: 4rem;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 5.19rem;
+      line-height: normal;
+    }
+
+    @media (min-width: $bp-xl) {
+      font-size: 6.19rem;
+    }
+
+    @media (min-width: $bp-2xl) {
+      font-size: 8.875rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__subtitle {
+    font-family: $font-family-primary;
+    font-weight: 500;
+    font-size: 1.38rem;
+    text-align: center;
+    color: $color-text-primary;
+    line-height: 26px;
+
+    @media (min-width: $bp-md) {
+      text-align: left;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: normal;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 2rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      font-size: 2.5rem;
+    }
+
+    @media (min-width: $bp-2xl) {
+      font-size: 3rem;
+    }
+  }
+
+  &__description {
+    font-family: $font-family-primary;
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-align: center;
+    color: $color-text-secondary;
+    line-height: 24px;
+
+    @media (min-width: $bp-md) {
+      text-align: left;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: normal;
+    }
+
+    @media (min-width: $bp-lg) {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: $bp-xl) {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: $bp-2xl) {
+      font-size: 2.31rem;
+    }
+  }
+
+  & .app-button--secondary {
+    @include button-size-md-secondary;
+
+    @media (min-width: $bp-2xl) {
+      @include button-size-lg-secondary;
+    }
+  }
+
+  & .app-button--primary {
+    @include button-size-md-primary;
+
+    @media (min-width: $bp-2xl) {
+      @include button-size-lg-primary;
+    }
+  }
+}

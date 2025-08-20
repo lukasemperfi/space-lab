@@ -1,0 +1,57 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+
+.faq {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    max-width: $page-container-width;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__col2 {
+    padding: 0px 25px;
+    position: relative;
+    top: -19px;
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    font-size: calcFluidValue(1.875rem, 3.75rem);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  &__video {
+    max-width: 100%;
+    aspect-ratio: 375 / 241;
+    mix-blend-mode: screen;
+  }
+}
+
+//1024px
+@media (min-width: $bp-lg) {
+  .faq {
+    &__container {
+      flex-direction: row;
+    }
+
+    &__col1 {
+      width: 48.158%;
+    }
+
+    &__col2 {
+      width: 51.842%;
+      position: static;
+      padding: 0px;
+    }
+
+    &__video {
+      aspect-ratio: 732/468;
+    }
+  }
+}

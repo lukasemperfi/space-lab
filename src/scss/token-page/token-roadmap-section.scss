@@ -1,0 +1,155 @@
+@use "../variables" as *;
+@use "../shared/mixins/typography" as *;
+
+.token-roadmap {
+  position: relative;
+  overflow-x: clip;
+
+  &__container {
+    padding-bottom: 59px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $bp-md) {
+      padding-top: 160px;
+      padding-left: 45px;
+      padding-right: 45px;
+      padding-bottom: 160px;
+    }
+
+    @media (min-width: $bp-2xl) {
+      padding-top: 104px;
+      padding-left: 17px;
+      padding-right: 17px;
+      padding-bottom: 160px;
+    }
+
+    @media (min-width: $bp-3xl) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  &__title {
+    font-family: $font-family-secondary;
+    font-weight: 600;
+    font-size: calcFluidValue(1.875rem, 3.8125rem);
+    letter-spacing: 0.11em;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-lg) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 1.55;
+      text-align: center;
+      max-width: 1080px;
+    }
+  }
+
+  & .roadmaplinevertical-icon {
+    margin-top: 27px;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 540px) {
+      width: 500px;
+      height: 100%;
+    }
+
+    @media (min-width: $bp-md) {
+      width: 700px;
+    }
+
+    @media (min-width: $bp-lg) {
+      display: none;
+    }
+  }
+
+  roadmaplinevertical-icon {
+    display: block;
+  }
+  & .roadmaplineverticalwide-icon {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      width: 100%;
+      height: auto;
+      margin-top: 99px;
+      display: block;
+    }
+  }
+
+  &__decor-mobile-top,
+  &__decor-mobile-middle,
+  &__decor-mobile-bottom {
+    display: block;
+    width: 178px;
+    height: 357px;
+    position: absolute;
+    z-index: -1;
+    filter: blur(60px);
+
+    @media (min-width: $bp-sm) {
+      width: 266px;
+      height: 476px;
+    }
+
+    @media (min-width: $bp-md) {
+      width: 430px;
+      height: 600px;
+    }
+
+    @media (min-width: $bp-lg) {
+      display: none;
+    }
+  }
+
+  &__decor-mobile-top {
+    top: 12%;
+    left: 67%;
+  }
+
+  &__decor-mobile-middle {
+    top: 50.5%;
+    left: 46%;
+  }
+
+  &__decor-mobile-bottom {
+    top: 75.5%;
+    left: 57.5%;
+  }
+
+  &__decor-desktop-left,
+  &__decor-desktop-right {
+    display: none;
+
+    @media (min-width: $bp-lg) {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      filter: blur(200px);
+    }
+  }
+
+  &__decor-desktop-left {
+    top: 24%;
+    right: 81.5%;
+  }
+
+  &__decor-desktop-right {
+    top: 70%;
+    left: 75%;
+  }
+}

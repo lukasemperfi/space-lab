@@ -1,0 +1,66 @@
+export const thesisData = [
+  {
+    id: 1,
+    title: 'Marketplace',
+    description:
+      'Discover the world of unique and exclusive NFT with the new Finity Touch trading platform',
+    logo: '<marketplace-icon></marketplace-icon>',
+    buttonText: 'More',
+  },
+  {
+    id: 2,
+    title: 'Fund',
+    description:
+      'Finity Touch Foundation provides an opportunity to get maximum support for new ideas in the world of Web 3.0',
+    logo: '<fund-icon></fund-icon>',
+    buttonText: 'More',
+  },
+  {
+    id: 3,
+    title: 'Games',
+    description:
+      'Play using the Finity token and have fun earning money. Your success is only in your hands!',
+    logo: '<games-icon></games-icon>',
+    buttonText: 'More',
+  },
+  {
+    id: 4,
+    title: 'Token',
+    description:
+      'This is an asset that feeds the Finity Touch ecosystem and ensures the development of existing projects.',
+    logo: '<token-icon></token-icon>',
+    buttonText: 'More',
+  },
+  {
+    id: 5,
+    title: 'Marketplace',
+    description:
+      'Discover the world of unique and exclusive NFT with the new Finity Touch trading platform',
+    logo: '<marketplace-icon></marketplace-icon>',
+    buttonText: 'More',
+  },
+  {
+    id: 6,
+    title: 'Fund',
+    description:
+      'Finity Touch Foundation provides an opportunity to get maximum support for new ideas in the world of Web 3.0',
+    logo: '<fund-icon></fund-icon>',
+    buttonText: 'More',
+  },
+  {
+    id: 7,
+    title: 'Games',
+    description:
+      'Play using the Finity token and have fun earning money. Your success is only in your hands!',
+    logo: '<games-icon></games-icon>',
+    buttonText: 'More',
+  },
+  {
+    id: 8,
+    title: 'Token',
+    description:
+      'This is an asset that feeds the Finity Touch ecosystem and ensures the development of existing projects.',
+    logo: '<token-icon></token-icon>',
+    buttonText: 'More',
+  },
+];
