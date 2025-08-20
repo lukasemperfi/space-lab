@@ -11,7 +11,20 @@ class FundHeroSection extends HTMLElement {
    <img loading="lazy"  class="hero-full-section__decor-mobile " src="../assets/images/fund-hero/decor-right-mobile.png" alt="hero-section-bg" >
 
       <div class="hero-full-section__video-container-fund">
-
+        <video 
+            class="hero-full-section__video-fund"   
+            muted 
+            loop 
+            playsinline
+           autoplay
+            aria-label="Finity Touch promotional video"
+            poster="../assets/video/fund-poster.webp"
+       
+            preload="metadata"
+          >
+            <source src="../assets/video/fund-hero.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
       </div>
           <div class="hero-full-section__content">
             <div class="hero-banner hero-banner--size-md">
