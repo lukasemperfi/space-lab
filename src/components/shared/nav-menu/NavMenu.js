@@ -7,11 +7,10 @@ class NavMenu extends HTMLElement {
 
   getCurrentPage() {
     const path = window.location.pathname;
-    if (path === '/' || path === '/index.html') return 'home';
-    if (path === '/marketplace' || path === '/marketplace-page.html')
-      return 'marketplace';
-    if (path === '/token' || path === '/token-page.html') return 'token';
-    if (path === '/fund' || path === '/fund-page.html') return 'fund';
+    if (path === '/space-lab/') return 'home';
+    if (path === '/space-lab/marketplace-page.html') return 'marketplace';
+    if (path === '/space-lab/token-page.html') return 'token';
+    if (path === '/space-lab/fund-page.html') return 'fund';
     return 'home';
   }
 
