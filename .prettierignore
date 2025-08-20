@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Fonts
+*.woff
+*.woff2
+*.ttf
+*.eot
+
+# Images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+
+# Other
+.git/
+gulpfile.js 
