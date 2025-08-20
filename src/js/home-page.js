@@ -7,11 +7,12 @@ import '../components/home-page/HeroSection.min.js';
 
 import '../components/home-page/HomeMarquee.min.js';
 import '../components/shared/icons/markquee-logo/BscLogoIcon.min.js';
-import '../components/shared/icons/markquee-logo/CoinGeckoLogoIcon.min.js';
+import '../components/shared/icons/markquee-logo/CoingeckoLogoIcon.min.js';
+
 import '../components/shared/icons/markquee-logo/InchLogoIcon.min.js';
 import '../components/shared/icons/markquee-logo/MetamaskLogoIcon.min.js';
 import '../components/shared/icons/markquee-logo/PancakeswapLogoIcon.min.js';
-import '../components/shared/icons/markquee-logo/TrustWalletLogoIcon.min.js';
+import '../components/shared/icons/markquee-logo/TrustwalletLogoIcon.min.js';
 import '../components/shared/icons/markquee-logo/CoinmarketcapLogoIcon.min.js';
 
 import '../components/home-page/HomeThesisSection.min.js';
