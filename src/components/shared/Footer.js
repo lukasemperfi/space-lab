@@ -11,8 +11,10 @@ class Footer extends HTMLElement {
         
         <div class="footer__content">
 
-          <div class="footer__logo">                  
+          <div class="footer__logo">
+          <a href="/space-lab/">                  
             <img loading="lazy"  src="../assets/icons/logo.svg" alt="Logo" aria-label="Logo">
+          </a>
           </div>
 
           <div class="footer__menu">

@@ -35,7 +35,7 @@ class FundHeroSection extends HTMLElement {
                     <p class="hero-banner__description">
 The Finity Foundation is a fund that fuels the development of new active projects, as well as the possibility of discovering new fragments of the ecosystem.
                     </p>
-                <button class="hero-banner__button wavy-button-2 color-accent-4">Leave a request</button>
+                <a href="#" class="hero-banner__button wavy-button-2 color-accent-4">Leave a request</a>
                 </div>
             </div>
      
