@@ -1,6 +1,5 @@
 {
   "name": "spacelab-gulp-project",
-  "homepage": "https://spacelab.github.io/",
   "version": "1.0.0",
   "description": "Modern web development project with Gulp, SCSS, JavaScript, and Web Components",
   "main": "index.js",
