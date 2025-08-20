@@ -38,8 +38,6 @@ class HomeThesisSection extends HTMLElement {
             1520: { spaceBetween: 30, slidesPerView: 4 },
           },
         });
-
-        console.log('Data set on thesis-slider:', thesisSlider);
       } else {
         console.error('thesis-slider not found');
       }

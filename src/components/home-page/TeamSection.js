@@ -111,7 +111,6 @@ class TeamSection extends HTMLElement {
       const teamSlider = this.querySelector('team-slider');
       if (teamSlider) {
         teamSlider.setData(teamData);
-        console.log('Data set on team-slider:', teamSlider);
       } else {
         console.error('thesis-slider not found');
       }

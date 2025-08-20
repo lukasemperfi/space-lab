@@ -92,15 +92,7 @@ class TeamSlider extends HTMLElement {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      // breakpoints: {
-      //   1520: {
-      //     slidesPerView: 4,
-      //     grid: {
-      //       rows: 2, // two rows on desktop
-      //       fill: 'row',
-      //     },
-      //   },
-      // },
+
     };
   }
 
